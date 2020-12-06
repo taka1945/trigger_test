@@ -5,12 +5,8 @@ using UnityEngine;
 public class Bomb : MonoBehaviour
 {
     public void Flyme()
-    {
-
-        transform.position = new Vector3(0, 3, 0);
+    {        
+        transform.position = new Vector3(this.transform.position.x, 3, this.transform.position.z);
         Debug.Log(" Flyme done.");
     }
-
-
-
 }
