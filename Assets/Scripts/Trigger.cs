@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Trigger : MonoBehaviour
 {
+    // popup 用
+    public string popUp;
 
     // 觸發執行
     IEnumerator OnTriggerEnter (Collider other)
@@ -24,5 +26,16 @@ public class Trigger : MonoBehaviour
                 }
             }
         }
+
+        // popup box 呼叫
+
+        if (other.name == "Ball" )
+        {
+            PopUpSystem pop = other.GetComponent<PopUpSystem>();
+            pop.PopUp(popUp);
+        }
+
+
+
     }
 }
